@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o public/stylesheets",
-    "build-task:autoprefixer": "postcss public/stylesheets/*.css --use autoprefixer -d public/stylesheets",
+    "build-task:scss-compile": "node-sass-chokidar --source-map true src/scss/ -o dist/stylesheets",
+    "build-task:autoprefixer": "postcss dist/stylesheets/*.css --use autoprefixer -d dist/stylesheets",
     "sass:build": "npm-run-all -p build-task:*",
     "sass:watch": "chokidar 'src/scss/**/*.scss' -c 'npm run sass:build'",
     "nodemon:dev": "nodemon ./bin/www localhost 3000",
